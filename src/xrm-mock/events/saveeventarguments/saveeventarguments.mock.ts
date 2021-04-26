@@ -10,4 +10,16 @@ export class SaveEventArgumentsMock implements Xrm.Events.SaveEventArguments {
   public preventDefault(): void {
     throw new Error("Not implemented.");
   }
+
+  public getEntityReference(): Xrm.LookupValue {
+    throw new Error("Not implemented.");
+  }
+
+  public getIsSaveSuccess(): boolean {
+    throw new Error("Not implemented.");
+  }
+
+  public getSaveErrorInfo(): string {
+    throw new Error("Not implemented.");
+  }
 }
