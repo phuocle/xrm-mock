@@ -4,4 +4,5 @@ export class SaveOptionsMock implements Xrm.SaveOptions {
   constructor(UseSchedulingEngine?: boolean) {
     this.UseSchedulingEngine = UseSchedulingEngine;
   }
+  saveMode: XrmEnum.SaveMode;
 }

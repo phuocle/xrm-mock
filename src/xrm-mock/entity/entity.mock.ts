@@ -16,6 +16,9 @@ export class EntityMock implements Xrm.Entity {
         this.attributes = components.attributes || new ItemCollectionMock();
         this.saveEventHandlers = [];
     }
+    addOnPostSave(handler: Xrm.Events.ContextSensitiveHandler): void {
+        throw new Error("Method not implemented.");
+    }
 
     public addOnSave(handler: Xrm.Events.ContextSensitiveHandler): void {
         this.saveEventHandlers.push(handler);
