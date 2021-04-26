@@ -1,6 +1,8 @@
 import { ItemCollectionMock } from "../../src/xrm-mock/collection/itemcollection/itemcollection.mock";
+import { FooterSectionMock } from "../../src/xrm-mock/controls/footersection/footersection.mock";
 import { FormItemMock } from "../../src/xrm-mock/controls/formitem/formitem.mock";
 import { FormSelectorMock } from "../../src/xrm-mock/controls/formselector/formselector.mock";
+import { HeaderSectionMock } from "../../src/xrm-mock/controls/headersection/headersection.mock";
 import { UiMock } from "../../src/xrm-mock/ui/ui.mock";
 
 describe("Xrm.Ui Mock", function() {
@@ -14,6 +16,8 @@ describe("Xrm.Ui Mock", function() {
                     label: "Main",
                 }),
             ])),
+            headerSection: new HeaderSectionMock(true, true, true),
+            footerSection: new FooterSectionMock(true)
         });
     });
     it("should exist", () => {
@@ -35,5 +39,11 @@ describe("Xrm.Ui Mock", function() {
     });
     it("should have a form type of update", () => {
         expect(this.xrmUiMock.getFormType()).toBe(2);
+    });
+    it("should has header section", () => {
+        expect(this.xrmUiMock.headerSection).toBeDefined();
+    });
+    it("should has footer section", () => {
+        expect(this.xrmUiMock.footerSection).toBeDefined();
     });
 });

@@ -110,3 +110,5 @@ export { QuickFormControlMock } from "./controls/quickform/quickform.mock";
 export { AppMock } from "./app/app.mock";
 export { KbSearchControlMock } from "./controls/kbsearchcontrol/kbsearchcontrol.mock";
 export { TimerControlMock } from "./controls/timercontrol/timercontrol.mock";
+export { HeaderSectionMock } from "./controls/headersection/headersection.mock";
+export { FooterSectionMock } from "./controls/footersection/footersection.mock";

@@ -10,6 +10,8 @@ var UiMock = /** @class */ (function () {
         this.navigation = components.navigation;
         this.tabs = components.tabs || new itemcollection_mock_1.ItemCollectionMock([]);
         this.quickForms = components.quickForms || new itemcollection_mock_1.ItemCollectionMock([]);
+        this.headerSection = components.headerSection;
+        this.footerSection = components.footerSection;
     }
     UiMock.prototype.setFormNotification = function (message, level, uniqueId) {
         var formNotificationAlreadyExists = false;
