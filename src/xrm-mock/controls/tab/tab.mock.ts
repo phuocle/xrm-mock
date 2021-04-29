@@ -77,6 +77,13 @@ export class TabMock implements Xrm.Controls.Tab {
     const index: number = findIndex(this.tabStateChangeHandlers, handler);
     this.tabStateChangeHandlers.splice(index, 1);
   }
+
+  public getContentType(): string {
+    throw new Error("Method not implemented.");
+  }
+  public setContentType(value: string): void {
+    throw new Error("Method not implemented.");
+  }
 }
 
 export interface ITabComponents {
