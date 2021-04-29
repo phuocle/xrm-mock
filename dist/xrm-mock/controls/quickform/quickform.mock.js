@@ -29,7 +29,7 @@ var QuickFormControlMock = /** @class */ (function (_super) {
         throw new Error("Method not implemented.");
     };
     QuickFormControlMock.prototype.isLoaded = function () {
-        throw new Error("Method not implemented.");
+        return true;
     };
     QuickFormControlMock.prototype.refresh = function () {
         throw new Error("Method not implemented.");
