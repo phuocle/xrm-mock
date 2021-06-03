@@ -10,7 +10,7 @@ export class QuickFormControlMock extends ControlMock implements Xrm.Controls.Qu
     }
 
     public isLoaded(): boolean {
-        throw new Error("Method not implemented.");
+        return true;
     }
 
     public refresh(): void {

@@ -59,6 +59,12 @@ var TabMock = /** @class */ (function () {
         var index = array_helper_1.findIndex(this.tabStateChangeHandlers, handler);
         this.tabStateChangeHandlers.splice(index, 1);
     };
+    TabMock.prototype.getContentType = function () {
+        throw new Error("Method not implemented.");
+    };
+    TabMock.prototype.setContentType = function (value) {
+        throw new Error("Method not implemented.");
+    };
     return TabMock;
 }());
 exports.TabMock = TabMock;

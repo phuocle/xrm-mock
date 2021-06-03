@@ -90,6 +90,7 @@ export { IAttStringControlComponents, IStringControlComponents, StringControlMoc
 export { TabMock } from "./controls/tab/tab.mock";
 export { TimelineWallMock } from "./controls/timelinewall/timelinewall.mock";
 export { UiCanGetVisibleElementMock } from "./controls/uicangetvisibleelement/uicangetvisibleelement.mock";
+export { UiCanSetVisibleElementMock } from "./controls/uicansetvisibleelement/uicansetvisibleelement.mock";
 export { UiFocusableMock } from "./controls/uifocusable/uifocusable.mock";
 export { UiKeyPressableMock } from "./controls/uikeypressable/uikeypressable.mock";
 export { UiLabelElementMock } from "./controls/uilabelelement/uilabelelement.mock";
@@ -109,3 +110,5 @@ export { QuickFormControlMock } from "./controls/quickform/quickform.mock";
 export { AppMock } from "./app/app.mock";
 export { KbSearchControlMock } from "./controls/kbsearchcontrol/kbsearchcontrol.mock";
 export { TimerControlMock} from "./controls/timercontrol/timercontrol.mock";
+export { HeaderSectionMock } from "./controls/headersection/headersection.mock";
+export { FooterSectionMock } from "./controls/footersection/footersection.mock";

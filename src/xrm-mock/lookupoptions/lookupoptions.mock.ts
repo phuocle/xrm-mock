@@ -2,7 +2,7 @@ export class LookupOptionsMock implements Xrm.LookupOptions {
   public allowMultiSelect?: boolean;
   public defaultEntityType?: string;
   public defaultViewId?: string;
-  public entityTypes?: string[];
+  public entityTypes: string[];
   public showBarcodeScanner?: boolean;
   public viewIds?: string[];
 
@@ -14,6 +14,9 @@ export class LookupOptionsMock implements Xrm.LookupOptions {
     this.showBarcodeScanner = components.showBarcodeScanner;
     this.viewIds = components.viewIds;
   }
+  disableMru?: boolean;
+  filters?: Xrm.LookupFilterOptions[];
+  searchText?: string;
 }
 
 export interface ILookupOptionsComponents {

@@ -19,6 +19,8 @@ export declare class TabMock implements Xrm.Controls.Tab {
     setFocus(): void;
     addTabStateChange(handler: (context: Xrm.Events.EventContext) => void): void;
     removeTabStateChange(handler: (context: Xrm.Events.EventContext) => void): void;
+    getContentType(): string;
+    setContentType(value: string): void;
 }
 export interface ITabComponents {
     uiStandardElement?: Xrm.Controls.UiStandardElement;
