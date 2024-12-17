@@ -5,6 +5,9 @@ export class LookupOptionsMock implements Xrm.LookupOptions {
   public entityTypes: string[];
   public showBarcodeScanner?: boolean;
   public viewIds?: string[];
+  public disableMru?: boolean;
+  public filters?: Xrm.LookupFilterOptions[];
+  public searchText?: string;
 
   constructor(components: ILookupOptionsComponents) {
     this.allowMultiSelect = components.allowMultiSelect;

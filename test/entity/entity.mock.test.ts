@@ -20,4 +20,15 @@ describe("Xrm.Entity Mock", () => {
         const entityReference = entity.getEntityReference();
         expect(entityReference.entityType).toBe("contact");
     });
+
+    it('should allow additional save modes', () => {
+        let saveMode: number = -1;
+        entity.addOnSave((context: Xrm.Events.SaveEventContext) => {
+            saveMode = context.getEventArgs().getSaveMode();
+        });
+
+        const qualify = 16;
+        entity.save(qualify as any);
+        expect(saveMode).toBe(16);
+    })
 });

@@ -28,8 +28,14 @@ var BooleanAttributeMock = /** @class */ (function (_super) {
     };
     BooleanAttributeMock.defaultComponents = function (components) {
         components.attributeType = "boolean";
+        components.value = components.value === true;
         return components;
     };
+    /**
+     * Gets the attribute format.
+     * @returns the string "boolean"
+     */
+    BooleanAttributeMock.prototype.getAttributeType = function () { return "boolean"; };
     return BooleanAttributeMock;
 }(enumattribute_mock_1.EnumAttributeMock));
 exports.BooleanAttributeMock = BooleanAttributeMock;

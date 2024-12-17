@@ -33,6 +33,7 @@ var NumberAttributeMock = /** @class */ (function (_super) {
         if (!components.attributeType) {
             components.attributeType = "decimal";
         }
+        components.value = components.value === undefined ? null : components.value;
         return components;
     };
     NumberAttributeMock.prototype.getFormat = function () {
@@ -63,10 +64,10 @@ var NumberAttributeMock = /** @class */ (function (_super) {
     };
     NumberAttributeMock.prototype.validatePrecision = function () {
         if (this.precision > 10) {
-            throw new Error(("precision cannot be greater than 10, but was " + this.precision));
+            throw new Error(("precision cannot be greater than 10, but was ".concat(this.precision)));
         }
         else if (this.precision < 0) {
-            throw new Error(("precision cannot be less than 0, but was " + this.precision));
+            throw new Error(("precision cannot be less than 0, but was ".concat(this.precision)));
         }
     };
     return NumberAttributeMock;

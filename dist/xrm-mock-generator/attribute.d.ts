@@ -1,11 +1,11 @@
 /// <reference types="xrm" />
 import * as XrmMock from "../xrm-mock/index";
-export declare type BooleanControlComponent = XrmMock.IAttBooleanControlComponents | XrmMock.IAttBooleanControlComponents[];
-export declare type DateControlComponent = XrmMock.IAttDateControlComponents | XrmMock.IAttDateControlComponents[];
-export declare type LookupControlComponent = XrmMock.IAttLookupControlComponents | XrmMock.IAttLookupControlComponents[];
-export declare type NumberControlComponent = XrmMock.IAttNumberControlComponents | XrmMock.IAttNumberControlComponents[];
-export declare type OptionSetControlComponent = XrmMock.IAttOptionSetControlComponents | XrmMock.IAttOptionSetControlComponents[];
-export declare type StringControlComponent = XrmMock.IAttStringControlComponents | XrmMock.IAttStringControlComponents[];
+export type BooleanControlComponent = XrmMock.IAttBooleanControlComponents | XrmMock.IAttBooleanControlComponents[];
+export type DateControlComponent = XrmMock.IAttDateControlComponents | XrmMock.IAttDateControlComponents[];
+export type LookupControlComponent = XrmMock.IAttLookupControlComponents | XrmMock.IAttLookupControlComponents[];
+export type NumberControlComponent = XrmMock.IAttNumberControlComponents | XrmMock.IAttNumberControlComponents[];
+export type OptionSetControlComponent = XrmMock.IAttOptionSetControlComponents | XrmMock.IAttOptionSetControlComponents[];
+export type StringControlComponent = XrmMock.IAttStringControlComponents | XrmMock.IAttStringControlComponents[];
 export default class Attribute {
     private Control;
     createBoolean(attComponents: XrmMock.IBooleanAttributeComponents, controlComponents?: BooleanControlComponent): XrmMock.BooleanAttributeMock;
@@ -13,7 +13,7 @@ export default class Attribute {
     createDate(attComponents: XrmMock.IDateAttributeComponents, controlComponents?: DateControlComponent): XrmMock.DateAttributeMock;
     createDate(name: string, value?: Date): XrmMock.DateAttributeMock;
     createLookup(attComponents: XrmMock.ILookupAttributeComponents, controlComponents?: LookupControlComponent): XrmMock.LookupAttributeMock;
-    createLookup(name: string, lookup: Xrm.LookupValue | Xrm.LookupValue[]): XrmMock.LookupAttributeMock;
+    createLookup(name: string, lookup?: Xrm.LookupValue | Xrm.LookupValue[]): XrmMock.LookupAttributeMock;
     createNumber(attComponents: XrmMock.INumberAttributeComponents, controlComponents?: NumberControlComponent): XrmMock.NumberAttributeMock;
     createNumber(name: string, value?: number): XrmMock.NumberAttributeMock;
     createOptionSet(attComponents: XrmMock.IOptionSetAttributeComponents, controlComponents?: OptionSetControlComponent): XrmMock.OptionSetAttributeMock;

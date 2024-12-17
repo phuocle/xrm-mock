@@ -14,7 +14,8 @@ export class GridControlMock extends ControlMock implements Xrm.Controls.GridCon
     public entityName: string;
     public viewSelector?: Xrm.Controls.ViewSelector;
     public grid?: Xrm.Controls.Grid;
-    public relationship?: Xrm.Navigation.Relationship;
+    public relationship?: Xrm.Controls.GridRelationship;
+    private _visible: boolean;
 
     constructor(components: IGridControlComponents) {
         super(GridControlMock.defaultComponents(components));
@@ -25,6 +26,10 @@ export class GridControlMock extends ControlMock implements Xrm.Controls.GridCon
         this.viewSelector = components.viewSelector;
         this.grid = components.grid;
         this.relationship = components.relationship;
+        this._visible = components.visible !== undefined ? components.visible : true;
+    }
+    public setVisible(visible: boolean): void {
+       this._visible = visible;
     }
     setVisible(visible: boolean): void {
         throw new Error("Method not implemented.");
@@ -47,6 +52,9 @@ export class GridControlMock extends ControlMock implements Xrm.Controls.GridCon
     public getViewSelector(): Xrm.Controls.ViewSelector {
         return this.viewSelector;
     }
+    public getVisible(): boolean {
+        return this._visible;
+    }
     public refresh(): void {
         throw new Error("Method not implemented.");
     }
@@ -66,7 +74,7 @@ export class GridControlMock extends ControlMock implements Xrm.Controls.GridCon
         throw new Error("getGridType not implemented.");
     }
 
-    public getRelationship(): Xrm.Navigation.Relationship {
+    public getRelationship(): Xrm.Controls.GridRelationship {
         return this.relationship;
     }
 
@@ -83,7 +91,7 @@ export interface IGridControlComponents extends IAttGridControlComponents, ICont
     name: string;
     viewSelector?: Xrm.Controls.ViewSelector;
     grid?: Xrm.Controls.Grid;
-    relationship?: Xrm.Navigation.Relationship;
+    relationship?: Xrm.Controls.GridRelationship;
 }
 
 export interface IAttGridControlComponents extends IAttControlComponents {

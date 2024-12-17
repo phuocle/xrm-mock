@@ -7,7 +7,8 @@ export declare class GridControlMock extends ControlMock implements Xrm.Controls
     entityName: string;
     viewSelector?: Xrm.Controls.ViewSelector;
     grid?: Xrm.Controls.Grid;
-    relationship?: Xrm.Navigation.Relationship;
+    relationship?: Xrm.Controls.GridRelationship;
+    private _visible;
     constructor(components: IGridControlComponents);
     setVisible(visible: boolean): void;
     refreshRibbon(): void;
@@ -16,11 +17,12 @@ export declare class GridControlMock extends ControlMock implements Xrm.Controls
     getEntityName(): string;
     getGrid(): Xrm.Controls.Grid;
     getViewSelector(): Xrm.Controls.ViewSelector;
+    getVisible(): boolean;
     refresh(): void;
     removeOnLoad(handler: () => void): void;
     getFetchXml(): string;
     getGridType(): number;
-    getRelationship(): Xrm.Navigation.Relationship;
+    getRelationship(): Xrm.Controls.GridRelationship;
     getUrl(client: number): string;
     openRelatedGrid(): void;
 }
@@ -28,7 +30,7 @@ export interface IGridControlComponents extends IAttGridControlComponents, ICont
     name: string;
     viewSelector?: Xrm.Controls.ViewSelector;
     grid?: Xrm.Controls.Grid;
-    relationship?: Xrm.Navigation.Relationship;
+    relationship?: Xrm.Controls.GridRelationship;
 }
 export interface IAttGridControlComponents extends IAttControlComponents {
     contextType?: XrmEnum.GridControlContext;

@@ -1,8 +1,7 @@
-import { ControlMock } from "../../controls/control/control.mock";
 import { NumberControlMock } from "../../controls/numbercontrol/numbercontrol.mock";
 import { AttributeMock, IAttributeComponents } from "../attribute/attribute.mock";
 
-export class NumberAttributeMock extends AttributeMock<NumberControlMock, number>
+export class NumberAttributeMock extends AttributeMock<NumberControlMock, NumberAttributeMock, number>
                                  implements Xrm.Attributes.NumberAttribute {
 
     private static defaultComponents(components: INumberAttributeComponents): INumberAttributeComponents {
@@ -11,6 +10,7 @@ export class NumberAttributeMock extends AttributeMock<NumberControlMock, number
         if (!components.attributeType) {
             components.attributeType = "decimal";
         }
+        components.value = components.value === undefined ? null : components.value;
         return components;
     }
 
@@ -65,7 +65,7 @@ export class NumberAttributeMock extends AttributeMock<NumberControlMock, number
     }
 }
 
-export interface INumberAttributeComponents extends IAttributeComponents<NumberControlMock, number> {
+export interface INumberAttributeComponents extends IAttributeComponents<NumberControlMock, NumberAttributeMock, number> {
     min?: number;
     max?: number;
     precision?: number;

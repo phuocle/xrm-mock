@@ -1,25 +1,25 @@
 export class SaveEventArgumentsMock implements Xrm.Events.SaveEventArguments {
+  protected saveMode: XrmEnum.SaveMode;
+  protected defaultPrevented: boolean = false;
+  public preventOnError: boolean = false;
+
+  public constructor(saveMode: XrmEnum.SaveMode) {
+    this.saveMode = saveMode;
+  }
+
+  public preventDefaultOnError(): void {
+    this.preventOnError = true;
+  }
+
   public getSaveMode(): XrmEnum.SaveMode {
-    throw new Error("Not implemented.");
+    return this.saveMode;
   }
 
   public isDefaultPrevented(): boolean {
-    throw new Error("Not implemented.");
+    return this.defaultPrevented;
   }
 
   public preventDefault(): void {
-    throw new Error("Not implemented.");
-  }
-
-  public getEntityReference(): Xrm.LookupValue {
-    throw new Error("Not implemented.");
-  }
-
-  public getIsSaveSuccess(): boolean {
-    throw new Error("Not implemented.");
-  }
-
-  public getSaveErrorInfo(): string {
-    throw new Error("Not implemented.");
+    this.defaultPrevented = true;
   }
 }

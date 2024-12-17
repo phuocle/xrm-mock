@@ -20,8 +20,12 @@ var standardcontrol_mock_1 = require("../standardcontrol/standardcontrol.mock");
 var BooleanControlMock = /** @class */ (function (_super) {
     __extends(BooleanControlMock, _super);
     function BooleanControlMock(components) {
-        return _super.call(this, components) || this;
+        return _super.call(this, BooleanControlMock.defaultComponents(components)) || this;
     }
+    BooleanControlMock.defaultComponents = function (components) {
+        components.controlType = "optionset";
+        return components;
+    };
     return BooleanControlMock;
 }(standardcontrol_mock_1.StandardControlMock));
 exports.BooleanControlMock = BooleanControlMock;
