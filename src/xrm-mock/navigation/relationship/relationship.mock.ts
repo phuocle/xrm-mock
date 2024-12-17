@@ -1,9 +1,9 @@
 export class RelationshipMock implements Xrm.Navigation.Relationship {
   public attributeName: string;
   public name: string;
-  public navigationPropertyName?: string;
-  public relationshipType?: XrmEnum.RelationshipType;
-  public roleType?: XrmEnum.RoleType;
+  public navigationPropertyName: string;
+  public relationshipType: XrmEnum.RelationshipType;
+  public roleType: XrmEnum.RoleType;
 
   constructor(components: IRelationshipComponents) {
     this.attributeName = components.attributeName;
@@ -17,7 +17,7 @@ export class RelationshipMock implements Xrm.Navigation.Relationship {
 export interface IRelationshipComponents {
   attributeName: string;
   name: string;
-  navigationPropertyName?: string;
-  relationshipType?: XrmEnum.RelationshipType;
-  roleType?: XrmEnum.RoleType;
+  navigationPropertyName: string;
+  relationshipType: XrmEnum.RelationshipType;
+  roleType: XrmEnum.RoleType;
 }
