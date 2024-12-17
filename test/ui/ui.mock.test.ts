@@ -43,9 +43,9 @@ describe("Xrm.Ui Mock", () => {
         expect(xrmUiMock.getFormType()).toBe(2);
     });
     it("should has header section", () => {
-        expect(this.xrmUiMock.headerSection).toBeDefined();
+        expect(xrmUiMock.headerSection).toBeDefined();
     });
     it("should has footer section", () => {
-        expect(this.xrmUiMock.footerSection).toBeDefined();
+        expect(xrmUiMock.footerSection).toBeDefined();
     });
 });

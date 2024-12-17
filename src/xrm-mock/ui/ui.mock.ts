@@ -7,15 +7,13 @@ import { HeaderSectionMock } from "../controls/headersection/headersection.mock"
 export class UiMock implements Xrm.Ui {
     public process: Xrm.Controls.ProcessControl;
     public controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control>;
-    public footerSection: Xrm.Controls.FooterSection;
+    public footerSection: FooterSectionMock;
     public formSelector: FormSelectorMock;
-    public headerSection: Xrm.Controls.HeaderSection;
+    public headerSection: HeaderSectionMock;
     public navigation: Xrm.Controls.Navigation;
     public tabs: Xrm.Collection.ItemCollection<Xrm.Controls.Tab>;
     public quickForms: Xrm.Collection.ItemCollection<Xrm.Controls.QuickFormControl>;
     public formNotifications: [{ message: string, level: Xrm.Page.ui.FormNotificationLevel, uniqueId: string }];
-    public headerSection: HeaderSectionMock;
-    public footerSection: FooterSectionMock;
 
     constructor(components: IUiComponents) {
         this.process = components.process;
@@ -27,7 +25,6 @@ export class UiMock implements Xrm.Ui {
         this.tabs = components.tabs ||  new ItemCollectionMock([]);
         this.quickForms = components.quickForms || new ItemCollectionMock([]);
         this.headerSection = components.headerSection;
-        this.footerSection = components.footerSection;
     }
 
     public setFormNotification(message: string, level: Xrm.Page.ui.FormNotificationLevel, uniqueId: string): boolean {
@@ -116,12 +113,10 @@ export class UiMock implements Xrm.Ui {
 export interface IUiComponents {
     process?: Xrm.Controls.ProcessControl;
     controls?: Xrm.Collection.ItemCollection<Xrm.Controls.Control>;
-    footerSection?: Xrm.Controls.FooterSection;
+    footerSection?: FooterSectionMock;
     formSelector?: FormSelectorMock;
-    headerSection?: Xrm.Controls.HeaderSection;
+    headerSection?: HeaderSectionMock;
     navigation?: Xrm.Controls.Navigation;
     tabs?: Xrm.Collection.ItemCollection<Xrm.Controls.Tab>;
     quickForms?: Xrm.Collection.ItemCollection<Xrm.Controls.QuickFormControl>;
-    headerSection?: HeaderSectionMock;
-    footerSection?: FooterSectionMock;
 }

@@ -19,15 +19,6 @@ var SaveEventArgumentsMock = /** @class */ (function () {
     SaveEventArgumentsMock.prototype.preventDefault = function () {
         this.defaultPrevented = true;
     };
-    SaveEventArgumentsMock.prototype.getEntityReference = function () {
-        throw new Error("Not implemented.");
-    };
-    SaveEventArgumentsMock.prototype.getIsSaveSuccess = function () {
-        throw new Error("Not implemented.");
-    };
-    SaveEventArgumentsMock.prototype.getSaveErrorInfo = function () {
-        throw new Error("Not implemented.");
-    };
     return SaveEventArgumentsMock;
 }());
 exports.SaveEventArgumentsMock = SaveEventArgumentsMock;

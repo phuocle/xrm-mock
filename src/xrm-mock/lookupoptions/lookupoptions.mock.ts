@@ -17,9 +17,6 @@ export class LookupOptionsMock implements Xrm.LookupOptions {
     this.showBarcodeScanner = components.showBarcodeScanner;
     this.viewIds = components.viewIds;
   }
-  disableMru?: boolean;
-  filters?: Xrm.LookupFilterOptions[];
-  searchText?: string;
 }
 
 export interface ILookupOptionsComponents {

@@ -5,9 +5,9 @@ import { HeaderSectionMock } from "../controls/headersection/headersection.mock"
 export declare class UiMock implements Xrm.Ui {
     process: Xrm.Controls.ProcessControl;
     controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control>;
-    footerSection: Xrm.Controls.FooterSection;
+    footerSection: FooterSectionMock;
     formSelector: FormSelectorMock;
-    headerSection: Xrm.Controls.HeaderSection;
+    headerSection: HeaderSectionMock;
     navigation: Xrm.Controls.Navigation;
     tabs: Xrm.Collection.ItemCollection<Xrm.Controls.Tab>;
     quickForms: Xrm.Collection.ItemCollection<Xrm.Controls.QuickFormControl>;
@@ -16,8 +16,6 @@ export declare class UiMock implements Xrm.Ui {
         level: Xrm.Page.ui.FormNotificationLevel;
         uniqueId: string;
     }];
-    headerSection: HeaderSectionMock;
-    footerSection: FooterSectionMock;
     constructor(components: IUiComponents);
     setFormNotification(message: string, level: Xrm.Page.ui.FormNotificationLevel, uniqueId: string): boolean;
     clearFormNotification(uniqueId: string): boolean;
@@ -34,12 +32,10 @@ export declare class UiMock implements Xrm.Ui {
 export interface IUiComponents {
     process?: Xrm.Controls.ProcessControl;
     controls?: Xrm.Collection.ItemCollection<Xrm.Controls.Control>;
-    footerSection?: Xrm.Controls.FooterSection;
+    footerSection?: FooterSectionMock;
     formSelector?: FormSelectorMock;
-    headerSection?: Xrm.Controls.HeaderSection;
+    headerSection?: HeaderSectionMock;
     navigation?: Xrm.Controls.Navigation;
     tabs?: Xrm.Collection.ItemCollection<Xrm.Controls.Tab>;
     quickForms?: Xrm.Collection.ItemCollection<Xrm.Controls.QuickFormControl>;
-    headerSection?: HeaderSectionMock;
-    footerSection?: FooterSectionMock;
 }

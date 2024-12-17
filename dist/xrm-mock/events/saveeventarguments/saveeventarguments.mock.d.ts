@@ -8,7 +8,4 @@ export declare class SaveEventArgumentsMock implements Xrm.Events.SaveEventArgum
     getSaveMode(): XrmEnum.SaveMode;
     isDefaultPrevented(): boolean;
     preventDefault(): void;
-    getEntityReference(): Xrm.LookupValue;
-    getIsSaveSuccess(): boolean;
-    getSaveErrorInfo(): string;
 }

@@ -31,9 +31,6 @@ export class GridControlMock extends ControlMock implements Xrm.Controls.GridCon
     public setVisible(visible: boolean): void {
        this._visible = visible;
     }
-    setVisible(visible: boolean): void {
-        throw new Error("Method not implemented.");
-    }
     public refreshRibbon(): void {
         throw new Error("Method not implemented.");
     }

@@ -10,9 +10,6 @@ export declare class LookupOptionsMock implements Xrm.LookupOptions {
     filters?: Xrm.LookupFilterOptions[];
     searchText?: string;
     constructor(components: ILookupOptionsComponents);
-    disableMru?: boolean;
-    filters?: Xrm.LookupFilterOptions[];
-    searchText?: string;
 }
 export interface ILookupOptionsComponents {
     allowMultiSelect?: boolean;
