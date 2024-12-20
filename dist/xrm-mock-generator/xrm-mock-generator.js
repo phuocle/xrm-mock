@@ -7,11 +7,13 @@ var attribute_1 = require("./attribute");
 var context_1 = require("./context");
 var control_1 = require("./control");
 var device_1 = require("./device");
+var encoding_1 = require("./encoding");
 var eventcontext_1 = require("./eventcontext");
 var form_1 = require("./form");
 var formcontext_1 = require("./formcontext");
 var mobile_1 = require("./mobile");
 var navigation_1 = require("./navigation");
+var panel_1 = require("./panel");
 var section_1 = require("./section");
 var tab_1 = require("./tab");
 var utility_1 = require("./utility");
@@ -32,6 +34,8 @@ var XrmMockGenerator = /** @class */ (function () {
             page: new XrmMock.PageMock(this.context, this.formContext),
             utility: utility_1.default.createUtility(),
             webApi: webapi_1.default.createApi(this.context.client),
+            panel: panel_1.default.createPanel(),
+            encoding: encoding_1.default.createEncoding()
         });
         if (typeof global === "undefined") {
             window.Xrm = xrm;
@@ -61,6 +65,8 @@ var XrmMockGenerator = /** @class */ (function () {
     XrmMockGenerator.WebApi = new webapi_1.default();
     XrmMockGenerator.Utility = new utility_1.default();
     XrmMockGenerator.App = new app_1.default();
+    XrmMockGenerator.Panel = new panel_1.default();
+    XrmMockGenerator.Encoding = new encoding_1.default();
     return XrmMockGenerator;
 }());
 exports.XrmMockGenerator = XrmMockGenerator;

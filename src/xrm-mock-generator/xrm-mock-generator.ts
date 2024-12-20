@@ -4,11 +4,13 @@ import Attribute from "./attribute";
 import Context from "./context";
 import Control from "./control";
 import Device from "./device";
+import Encoding from "./encoding";
 import EventContext from "./eventcontext";
 import Form from "./form";
 import FormContext from "./formcontext";
 import Mobile from "./mobile";
 import Navigation from "./navigation";
+import Panel from "./panel";
 import Section from "./section";
 import Tab from "./tab";
 import Utility from "./utility";
@@ -31,6 +33,8 @@ export class XrmMockGenerator {
   public static WebApi: WebApi = new WebApi();
   public static Utility: Utility = new Utility();
   public static App: App = new App();
+  public static Panel: Panel = new Panel();
+  public static Encoding: Encoding = new Encoding();
 
   public static context: XrmMock.ContextMock;
   public static formContext: XrmMock.FormContextMock;
@@ -41,8 +45,7 @@ export class XrmMockGenerator {
 
     this.context = components.context || Context.createContext();
     this.formContext = FormContext.createFormContext(components.entity, components.ui, components.process);
-    this.eventContext = EventContext.createEventContext(components.entity, components.context,
-      this.formContext, components.ui, components.process);
+    this.eventContext = EventContext.createEventContext(components.entity, components.context, this.formContext, components.ui, components.process);
 
     const xrm = new XrmMock.XrmStaticMock({
       app: App.createApp(),
@@ -55,6 +58,8 @@ export class XrmMockGenerator {
       ),
       utility: Utility.createUtility(),
       webApi: WebApi.createApi(this.context.client),
+      panel: Panel.createPanel(),
+      encoding: Encoding.createEncoding()
     });
 
     if (typeof global === "undefined") {
