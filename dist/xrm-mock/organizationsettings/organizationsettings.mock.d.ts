@@ -10,6 +10,9 @@ export declare class OrganizationSettingsMock implements Xrm.OrganizationSetting
     baseCurrency: Xrm.LookupValue;
     attributes: any;
     organizationGeo: string;
+    isTrialOrganization: boolean;
+    organizationExpiryDate: Date;
+    fullNameConventionCode: number;
     constructor(components: IOrganizationSettingsComponents);
 }
 export interface IOrganizationSettingsComponents {
@@ -22,4 +25,7 @@ export interface IOrganizationSettingsComponents {
     useSkypeProtocol?: boolean;
     baseCurrency?: Xrm.LookupValue;
     attributes?: any;
+    isTrialOrganization: boolean;
+    organizationExpiryDate?: Date;
+    fullNameConventionCode: number;
 }

@@ -9,6 +9,9 @@ export class OrganizationSettingsMock implements Xrm.OrganizationSettings {
   public baseCurrency: Xrm.LookupValue;
   public attributes: any;
   public organizationGeo: string;
+  public isTrialOrganization: boolean;
+  public organizationExpiryDate: Date;
+  public fullNameConventionCode: number;
 
   constructor(components: IOrganizationSettingsComponents) {
     this.baseCurrencyId = components.baseCurrencyId;
@@ -20,6 +23,9 @@ export class OrganizationSettingsMock implements Xrm.OrganizationSettings {
     this.useSkypeProtocol = components.useSkypeProtocol;
     this.baseCurrency = components.baseCurrency;
     this.attributes = components.attributes;
+    this.isTrialOrganization = components.isTrialOrganization;
+    this.organizationExpiryDate = components.organizationExpiryDate;
+    this.fullNameConventionCode = components.fullNameConventionCode;
   }
 }
 
@@ -33,4 +39,7 @@ export interface IOrganizationSettingsComponents {
   useSkypeProtocol?: boolean;
   baseCurrency?: Xrm.LookupValue;
   attributes?: any;
+  isTrialOrganization: boolean;
+  organizationExpiryDate?: Date;
+  fullNameConventionCode: number;
 }

@@ -150,7 +150,10 @@ function buildDefaultOrganizationSettings() {
         organizationId: "00000000-0000-0000-0000-0000000000000",
         uniqueName: "test-uniqueName",
         useSkypeProtocol: true,
-        organizationGeo: ""
+        organizationGeo: "",
+        isTrialOrganization: false,
+        organizationExpiryDate: null,
+        fullNameConventionCode: 1
     }
 }
 

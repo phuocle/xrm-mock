@@ -12,6 +12,9 @@ var OrganizationSettingsMock = /** @class */ (function () {
         this.useSkypeProtocol = components.useSkypeProtocol;
         this.baseCurrency = components.baseCurrency;
         this.attributes = components.attributes;
+        this.isTrialOrganization = components.isTrialOrganization;
+        this.organizationExpiryDate = components.organizationExpiryDate;
+        this.fullNameConventionCode = components.fullNameConventionCode;
     }
     return OrganizationSettingsMock;
 }());
