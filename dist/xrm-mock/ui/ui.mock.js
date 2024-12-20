@@ -77,8 +77,14 @@ var UiMock = /** @class */ (function () {
     UiMock.prototype.addOnLoad = function (handler) {
         throw new Error(("addOnLoad not implemented"));
     };
+    UiMock.prototype.addLoaded = function (handler) {
+        throw new Error(("addLoaded not implemented"));
+    };
     UiMock.prototype.removeOnLoad = function (handler) {
         throw new Error(("removeOnLoad not implemented"));
+    };
+    UiMock.prototype.removeLoaded = function (handler) {
+        throw new Error(("removeLoaded not implemented"));
     };
     UiMock.prototype._getFormNotificationExists = function (notifications, uniqueId) {
         var matchingNotificationsById = notifications.filter(function (item) {

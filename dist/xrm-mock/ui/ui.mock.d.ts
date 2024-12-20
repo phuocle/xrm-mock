@@ -26,7 +26,9 @@ export declare class UiMock implements Xrm.Ui {
     refreshRibbon(): void;
     setFormEntityName(arg: string): void;
     addOnLoad(handler: Xrm.Events.ContextSensitiveHandler): void;
+    addLoaded(handler: Xrm.Events.LoadEventHandler): void;
     removeOnLoad(handler: Xrm.Events.ContextSensitiveHandler): void;
+    removeLoaded(handler: Xrm.Events.ContextSensitiveHandler): void;
     private _getFormNotificationExists;
 }
 export interface IUiComponents {

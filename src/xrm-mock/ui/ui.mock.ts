@@ -98,8 +98,16 @@ export class UiMock implements Xrm.Ui {
         throw new Error(("addOnLoad not implemented"));
     }
 
+    public addLoaded(handler: Xrm.Events.LoadEventHandler): void {
+        throw new Error(("addLoaded not implemented"));
+    }
+
     public removeOnLoad(handler: Xrm.Events.ContextSensitiveHandler): void {
         throw new Error(("removeOnLoad not implemented"));
+    }
+
+    public removeLoaded(handler: Xrm.Events.ContextSensitiveHandler): void {
+        throw new Error(("removeLoaded not implemented"));
     }
 
     private _getFormNotificationExists(notifications, uniqueId): boolean {
