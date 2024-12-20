@@ -17,4 +17,5 @@ export declare class UtilityMock implements Xrm.Utility {
     showProgressIndicator(message: string): void;
     getLearningPathAttributeName(): string;
     getPageContext(): any;
+    getEntityMainFormDescriptor(entityName: string, formId: string): any;
 }

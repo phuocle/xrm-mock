@@ -75,4 +75,8 @@ export class UtilityMock implements Xrm.Utility {
     public getPageContext(): any {
         throw new Error("Method not implemented.");
     }
+
+    public getEntityMainFormDescriptor(entityName: string, formId: string): any {
+        throw new Error("Method not implemented.");
+    }
 }

@@ -62,6 +62,9 @@ var UtilityMock = /** @class */ (function () {
     UtilityMock.prototype.getPageContext = function () {
         throw new Error("Method not implemented.");
     };
+    UtilityMock.prototype.getEntityMainFormDescriptor = function (entityName, formId) {
+        throw new Error("Method not implemented.");
+    };
     return UtilityMock;
 }());
 exports.UtilityMock = UtilityMock;
