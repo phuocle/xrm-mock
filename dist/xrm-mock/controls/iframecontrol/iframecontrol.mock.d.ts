@@ -5,9 +5,11 @@ export declare class IframeControlMock extends ControlMock implements Xrm.Contro
     getObject(): any;
     getContentWindow(): Promise<Window>;
     getSrc(): string;
+    getData(): string;
     setSrc(src: string): void;
     getInitialUrl(): string;
     getDisabled(): boolean;
     setDisabled(value: boolean): void;
     setFocus(): void;
+    setData(): void;
 }

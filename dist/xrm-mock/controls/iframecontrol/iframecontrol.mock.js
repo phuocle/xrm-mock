@@ -34,6 +34,9 @@ var IframeControlMock = /** @class */ (function (_super) {
     IframeControlMock.prototype.getSrc = function () {
         throw new Error("getSrc not implemented.");
     };
+    IframeControlMock.prototype.getData = function () {
+        throw new Error("getData not implemented.");
+    };
     IframeControlMock.prototype.setSrc = function (src) {
         throw new Error("setSrc not implemented.");
     };
@@ -48,6 +51,9 @@ var IframeControlMock = /** @class */ (function (_super) {
     };
     IframeControlMock.prototype.setFocus = function () {
         throw new Error("setFocus not implemented.");
+    };
+    IframeControlMock.prototype.setData = function () {
+        throw new Error("setData not implemented.");
     };
     return IframeControlMock;
 }(control_mock_1.ControlMock));

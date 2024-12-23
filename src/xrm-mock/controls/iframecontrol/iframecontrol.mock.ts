@@ -13,6 +13,9 @@ export class IframeControlMock extends ControlMock implements Xrm.Controls.Ifram
   public getSrc(): string {
       throw new Error("getSrc not implemented.");
   }
+  public getData(): string {
+    throw new Error("getData not implemented.");
+}
   public setSrc(src: string): void {
       throw new Error("setSrc not implemented.");
   }
@@ -27,5 +30,8 @@ export class IframeControlMock extends ControlMock implements Xrm.Controls.Ifram
   }
   public setFocus(): void {
     throw new Error("setFocus not implemented.");
+  }
+  public setData(): void {
+    throw new Error("setData not implemented.");
   }
 }
