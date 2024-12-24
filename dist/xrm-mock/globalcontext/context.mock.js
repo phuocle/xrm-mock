@@ -91,6 +91,9 @@ var ContextMock = /** @class */ (function () {
     ContextMock.prototype.getCurrentAppUrl = function () {
         return this.currentAppUrl;
     };
+    ContextMock.prototype.isOnPremises = function () {
+        return this.onPremise;
+    };
     ContextMock.prototype.isOnPremise = function () {
         return this.onPremise;
     };

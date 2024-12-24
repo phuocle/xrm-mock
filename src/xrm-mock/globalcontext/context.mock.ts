@@ -128,6 +128,10 @@ export class ContextMock implements Xrm.GlobalContext {
         return this.currentAppUrl;
     }
 
+    public isOnPremises(): boolean {
+        return this.onPremise;
+    }
+
     public isOnPremise(): boolean {
         return this.onPremise;
     }
